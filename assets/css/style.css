@@ -1,0 +1,495 @@
+/* =========================== FONT & RESET =========================== */
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #0c043f, #105b4b);
+  color: #f0f0f0;
+}
+
+/* =========================== VARIABEL WARNA =========================== */
+:root {
+  --primary: #76ffd2;
+  --secondary: #09408e;
+  --dark: #0b3e33;
+  --light: #eafff6;
+  --text: #f0f0f0;
+}
+
+/* =========================== SECTION UMUM =========================== */
+section {
+  padding: 100px 20px;
+  background: transparent;
+}
+
+section h2 {
+  font-weight: 700;
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 2.2rem;
+}
+
+section p {
+  text-align: justify;
+  font-size: 2.1rem;
+  color: var(--light);
+  margin: 0 auto;
+  max-width: 800px; /* opsional, agar paragraf tidak terlalu lebar */
+}
+
+/* =========================== HERO =========================== */
+.hero {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 1.3rem;
+  margin-top: 15px;
+  color: #c1f5d1;
+}
+
+.hero a.btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  background-color: #ffffff22;
+  color: #76ffd2;
+  border: 1px solid #76ffd2;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.hero a.btn:hover {
+  background-color: #76ffd2;
+  color: #00332a;
+}
+
+/* =========================== ABOUT SECTION =========================== */
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.about img {
+  max-width: 390px;
+  border-radius: 50%;
+  background-color: transparent;
+  box-shadow: 0 0 0 rgb(35, 1, 124); /* hilangkan shadow */
+}
+
+.about-text {
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #eafff6;
+  text-align: left;
+}
+
+/* =========================== GRID UNTUK SKILL, PROJECT, SERTIFIKAT =========================== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 30px 0;
+  text-align: center;
+}
+
+.card {
+  background: #ffffff10;
+  padding: 20px;
+  border-radius: 16px;
+  color: #eafff6;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================== CONTACT =========================== */
+.contact ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.contact ul li {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #eafff6;
+}
+
+.contact a {
+  color: #9effe5;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* =========================== LINK =========================== */
+a {
+  color: #76ffd2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== FONT GOOGLE ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap');
+
+.hero h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 5.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(0, 255, 200, 0.8), 0 0 20px rgba(0, 255, 200, 0.5);
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+/* Bersinar */
+@keyframes glowText {
+  from {
+    text-shadow: 0 0 10px #00ffe0, 0 0 20px #00ffe0;
+  }
+  to {
+    text-shadow: 0 0 20px #00ffe0, 0 0 40px #00ffe0;
+  }
+}
+
+.typing {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  color: #ffffff;
+  border-right: 2px solid rgba(255, 255, 255, 0.75);
+  white-space: nowrap;
+  overflow: hidden;
+  width: 60ch; /* sesuaikan dengan panjang teks terpanjang */
+  margin: 0 auto;
+  text-align: center;
+  animation: typing 4s steps(40, end) infinite alternate,
+             blink 0.75s step-end infinite;
+}
+
+/* Animasi mengetik */
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 32ch; /* sama seperti di .typing */
+  }
+}
+
+/* Animasi cursor blink */
+@keyframes blink {
+  0%, 100% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgba(255, 255, 255, 0.75);
+  }
+}
+
+
+/* Button Animation */
+.hero .btn-container {
+  margin-top: 220px; /* jarak lebih jauh dari teks */
+}
+
+.hero a.btn {
+  font-weight: bold;
+  padding: 12px 30px;
+  border-radius: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 10rem;
+}
+
+.hero a.btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 20px rgba(0,255,255,0.4);
+}
+
+.hero {
+  position: relative;
+  background: linear-gradient(to bottom, #0d0d2b, #1d1f38);
+  color: #fff;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('https://images.unsplash.com/photo-1624280433509-b01afeaf68e5?q=80&w=1315&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover no-repeat;
+  opacity: 0.08;
+  z-index: 0;
+}
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+
+#skills-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem; /* Tambah jarak antar kartu */
+   margin-bottom: 10rem;
+}
+
+.skills .card {
+  all: unset;
+  display: block;
+  background: rgba(43, 20, 95, 0.12); /* Lebih tipis */
+  backdrop-filter: blur(6px);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  padding: 1rem; /* Lebih ringan dari sebelumnya */
+  color: #fff;
+  text-align: center;
+  height: 100%;
+}
+
+
+.skills .card:hover {
+  transform: translateY(-5px);
+}
+
+.skills img {
+  width: 60px;
+  margin-bottom: 1rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+
+.projects {
+  padding: 4rem 2rem;
+  background: rgba(43, 20, 95, 0.12);
+  color: white;
+  text-align: center;
+   margin-bottom: 25rem; /* atau sesuai kebutuhan, bisa 3rem, 4rem, dst */
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.project-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+}
+
+.project-popup {
+  position: fixed; /* agar berada di tengah layar */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(7, 3, 71, 0.95);
+  color: #fff;
+  width: 450px;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: left;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+  z-index: 1000;
+}
+
+.project-card:hover .project-popup,
+.project-popup:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.project-popup img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #28a745;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #218838;
+}
+
+.certificate-section {
+  padding: 5rem 0;
+  text-align: center;
+  margin-bottom: 10rem;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.certificate-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+.certificate-card {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.certificate-card img {
+  width: 100%;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.certificate-card:hover {
+  transform: scale(1.03);
+}
+
+.certificate-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(7, 3, 71, 0.95);
+  color: #fff;
+  width: 300px;
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: left;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  z-index: 1000;
+}
+
+.certificate-card:hover .certificate-popup,
+.certificate-popup:hover {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.contact {
+  padding: 4rem 2rem;
+  background: #ffffff00;
+  color: white;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-in-out;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  width: 250px;
+  transition: transform 0.3s ease, background 0.3s ease;
+  animation: fadeInUp 1s ease-in-out;
+}
+
+.contact-card i {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #00ffff;
+}
+
+.contact-card a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Animasi */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
